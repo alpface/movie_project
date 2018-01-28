@@ -23,3 +23,7 @@ def logout():
     # 退出时重定向到home模块下的login视图
     # url_for() 为路由生成器
     return redirect(url_for('home.login'))
+
+@home.route('/register/')
+def register():
+    return render_template('home/register.html')
