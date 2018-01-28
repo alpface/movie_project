@@ -6,8 +6,20 @@
 # @Software: PyCharm
 
 from . import home
-from flask import render_template
+from flask import render_template, redirect, url_for
 
 @home.route('/')
 def index():
     return render_template('home/index.html')
+
+# 登录
+@home.route('/login/')
+def login():
+    return render_template('home/login.html')
+
+# 退出
+@home.route('/logout/')
+def logout():
+    # 退出时重定向到home模块下的login视图
+    # url_for() 为路由生成器
+    return redirect(url_for('home.login'))
