@@ -64,5 +64,9 @@ def animation():
 def search():
     return render_template('home/search.html')
 
+# 播放详情页
+@home.route('/play/')
+def play():
+    return render_template('home/play.html')
 
 
