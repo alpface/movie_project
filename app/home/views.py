@@ -8,10 +8,6 @@
 from . import home
 from flask import render_template, redirect, url_for
 
-@home.route('/')
-def index():
-    return render_template('home/index.html')
-
 # 登录
 @home.route('/login/')
 def login():
@@ -53,8 +49,15 @@ def loginlog():
 def moviecol():
     return render_template('home/moviecol.html')
 
+# 主页
+@home.route('/')
+def index():
+    return render_template('home/index.html')
 
-
+# 动画
+@home.route('/animation/')
+def animation():
+    return render_template('home/animation.html')
 
 
 
