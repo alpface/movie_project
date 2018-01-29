@@ -59,5 +59,10 @@ def index():
 def animation():
     return render_template('home/animation.html')
 
+# 搜索
+@home.route('/search/')
+def search():
+    return render_template('home/search.html')
+
 
 
